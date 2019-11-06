@@ -4,7 +4,7 @@ import random
 import operator
 import pandas as pd
 import sys
-
+import statistics
 
 def readInstance(fileName):
     data = pd.read_csv(fileName, header=None, delimiter=";")
@@ -28,16 +28,16 @@ def readInstance(fileName):
     return adjacencyMatrix
 
 
-def plotResults(nd):
-    nNodes = len(nd)
-    index = np.arange(nNodes)
-    bar_width = 0.70
+def plotResults(x, y):
+    bar_width = 0.8
     opacity = 0.8
-    plt.bar(index, nd, bar_width,
+    plt.bar(y,x, bar_width,
             alpha=opacity,
             color='g',
             label='Degrees')
-    plt.xticks(index + bar_width, index)
+    plt.xlim(0, 18)
+    plt.xlabel("Degrees")
+    plt.ylabel("N of connections")
     plt.show()
 
 
@@ -50,7 +50,7 @@ def getDegrees(adjacencyMatrix):
             if j != 0:
                 count += 1
         nd[i] = count
-    return nd
+    return list(nd)
 
 
 def main():
@@ -61,7 +61,12 @@ def main():
 
     adjacencyMatrix = readInstance(sys.argv[1])
     nd = getDegrees(adjacencyMatrix)
-    plotResults(nd)
+    countDegrees = [[x,nd.count(x)] for x in set(nd)]
+    tlist = list(zip(*countDegrees))
+    y = tlist[0]
+    x = tlist[1]
+        
+    plotResults(x, y)
 
 
 if __name__ == "__main__":
