@@ -1,0 +1,21 @@
+The input variables are as follows:
+    air - Surface air temperature - Kelvin degrees
+    pressure - Pressure at surface level - Pascals
+    rhum - Relative humidity at surface level -%
+    uwnd - Wind speed from west to east (x axis) - Meters per second
+    vwnd - Wind speed from south to north (y axis) - Meters per second
+    WDIR - Wind direction clockwise - Degrees
+    WSPD - Average wind speed - Meters per second
+    GST - Wind peak speed - Meters per second
+    DPD - Dominant wave period - Seconds
+    APD - Average period of dominant wave - Seconds
+    MWD - Direction from which the dominant wave period comes, DPD - Degrees
+    PRES - Pressure at surface level - Hectopascals
+    ATMP - Air temperature at the top of the buoy - Celsius degrees
+    WTMP - Sea level temperature - Celsius degrees
+    DEWP - Dew point taken at the same height as ATMP - Celsius degrees
+    VIS - Visibility from the buoy - Nautical miles
+    TIDE - Water level in feet above or below the lower average of the water - Feet
+
+The output variable indicates the wave height in the following six hours,
+and which has been discretized in 4 classes: {Low, Medium, Moderate, Very High}

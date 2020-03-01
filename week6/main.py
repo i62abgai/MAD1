@@ -45,29 +45,54 @@ def main():
     means = []
     stds = []
     for column in df:
-        freqVals = getFreq(column, df, shape)
-        tlist = list(zip(*freqVals))
-        mean = getMean(tlist[1])
-        means.append(mean)
-        std = getStd(tlist[1], mean)
-        stds.append(std)
-        freqAttr.append(freqVals)
-        print("\n", column, "\n")
-        for values in freqVals:
-            print("Value: ", values[0], " Frequency: ", values[1],
-                  " Relative Freq: ", values[2], " Cumulative Freq: ", values[3])
+        if column != "Species":
+            freqVals = getFreq(column, df, shape)
+            tlist = list(zip(*freqVals))
+            colVals = list(df[column])
+            mean = getMean(colVals)
+            means.append(mean)
+            std = getStd(colVals, mean)
+            stds.append(std)
+            freqAttr.append(freqVals)
+            print("\n", column, "\n")
+            """for values in freqVals:
+                print("Value: ", values[0], " Frequency: ", values[1],
+                      " Relative Freq: ", values[2], " Cumulative Freq: ", values[3])"""
 
+    print("\n\n")
+
+        
+    # Theoretical distributions
     for i, column in enumerate(df):
-        x = np.linspace(means[i] - 3*stds[i], means[i] + 3*stds[i], 100)
-        line, = plt.plot(x, stats.norm.pdf(x, means[i], stds[i]))
-        line.set_label(column)
-        print(column, " Mean: ", means[i], " Std: ", stds[i])
-    
-    """# Normal Distribution
-    x = np.linspace(0 - 3*1, 0 + 3*1, 100)
-    line, = plt.plot(x, stats.norm.pdf(x, 0, 1))
-    line.set_label("Normal distribution")"""
-    plt.legend()
+        if column != "Species":      
+            leftSigma = means[i]-stds[i]
+            rightSigma = means[i]+stds[i]
+            
+            left2Sigma = means[i]-2*stds[i]
+            right2Sigma = means[i]+2*stds[i]
+            
+            left3Sigma = means[i]-3*stds[i]
+            right3Sigma = means[i]+3*stds[i]
+            
+            percentSigma = len(list(x for x in list(df[column]) if leftSigma <= x <= rightSigma))
+            percent2Sigma = len(list(x for x in list(df[column]) if left2Sigma <= x <= right2Sigma))
+            percent3Sigma = len(list(x for x in list(df[column]) if left3Sigma <= x <= right3Sigma))
+            
+            print(column, " Mean: ", means[i], " Std: ", stds[i],
+                  " \n\tRange(1*sigma): ", means[i]-stds[i], ", ", means[i]+stds[i], " --> elements: ", percentSigma, " percent: ", percentSigma/150,
+                  " \n\tRange(2*sigma): ", means[i]-2*stds[i], ", ", means[i]+2*stds[i], " --> elements: ", percent2Sigma, " percent: ", percent2Sigma/150,
+                  " \n\tRange(3*sigma): ", means[i]-3*stds[i], ", ", means[i]+3*stds[i], " --> elements: ", percent3Sigma, " percent: ", percent3Sigma/150, "\n")
+
+    fig1, ax1 = plt.subplots()
+    # Empirical distributions
+    for i, column in enumerate(df):
+        if column != "Species":
+            x = np.linspace(means[i] - 3*stds[i], means[i] + 3*stds[i], 100)
+            line2, = ax1.plot(x, stats.norm.pdf(x, means[i], stds[i]))
+            line2.set_label(column)
+    ax1.grid(True)
+    ax1.legend()
+
     plt.show()
 
 

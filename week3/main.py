@@ -65,7 +65,7 @@ def main():
     tlist = list(zip(*countDegrees))
     y = tlist[0]
     x = tlist[1]
-        
+    print(adjacencyMatrix)
     plotResults(x, y)
 
 

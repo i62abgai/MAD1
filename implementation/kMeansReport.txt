@@ -1,0 +1,146 @@
+Report from KMEANS algorithm on the dataset "iris.csv"
+
+Has class tag: yes, class tag is: Species
+
+Summary of attributes:
+	Sepal_Length: 
+		Mean: 2.55
+		Standard Deviation: 1.8874586088176872
+
+	Sepal_Width: 
+		Mean: 2.375
+		Standard Deviation: 1.7640507362318127
+
+	Petal_Length: 
+		Mean: 2.35
+		Standard Deviation: 1.7298843892006195
+
+	Petal_Width: 
+		Mean: 2.3499999999999996
+		Standard Deviation: 1.6560495161679194
+
+KMEANS algorithm run
+
+
+Number of clusters: 2		SSE: 12.143688281579717
+
+	Cluster 0: 
+		Centroid Value: [0.545      0.36333333 0.6620339  0.65666667]
+		There are 100 instances in this cluster 
+
+	Cluster 1: 
+		Centroid Value: [0.19611111 0.59083333 0.07864407 0.06      ]
+		There are 50 instances in this cluster 
+
+Number of clusters: 3		SSE: 6.99811400482676
+
+	Cluster 0: 
+		Centroid Value: [0.19611111 0.59083333 0.07864407 0.06      ]
+		There are 50 instances in this cluster 
+
+	Cluster 1: 
+		Centroid Value: [0.70726496 0.4508547  0.79704476 0.82478632]
+		There are 39 instances in this cluster 
+
+	Cluster 2: 
+		Centroid Value: [0.44125683 0.30737705 0.57571548 0.54918033]
+		There are 61 instances in this cluster 
+
+Number of clusters: 4		SSE: 5.568044517284285
+
+	Cluster 0: 
+		Centroid Value: [0.75534188 0.48237179 0.83116037 0.86698718]
+		There are 26 instances in this cluster 
+
+	Cluster 1: 
+		Centroid Value: [0.55352304 0.375      0.6709384  0.66666667]
+		There are 41 instances in this cluster 
+
+	Cluster 2: 
+		Centroid Value: [0.19611111 0.59083333 0.07864407 0.06      ]
+		There are 50 instances in this cluster 
+
+	Cluster 3: 
+		Centroid Value: [0.36868687 0.25505051 0.51771957 0.47853535]
+		There are 33 instances in this cluster 
+
+Number of clusters: 5		SSE: 4.999716015487785
+
+	Cluster 0: 
+		Centroid Value: [0.5150463  0.30381944 0.70550847 0.72222222]
+		There are 24 instances in this cluster 
+
+	Cluster 1: 
+		Centroid Value: [0.56763285 0.41847826 0.60795873 0.56521739]
+		There are 23 instances in this cluster 
+
+	Cluster 2: 
+		Centroid Value: [0.19611111 0.59083333 0.07864407 0.06      ]
+		There are 50 instances in this cluster 
+
+	Cluster 3: 
+		Centroid Value: [0.75       0.48302469 0.82611425 0.86419753]
+		There are 27 instances in this cluster 
+
+	Cluster 4: 
+		Centroid Value: [0.33974359 0.24519231 0.49934811 0.46153846]
+		There are 26 instances in this cluster 
+
+Number of clusters: 6		SSE: 4.057438948150224
+
+	Cluster 0: 
+		Centroid Value: [0.56378601 0.36574074 0.61581921 0.55864198]
+		There are 27 instances in this cluster 
+
+	Cluster 1: 
+		Centroid Value: [0.11616162 0.45833333 0.07395994 0.03787879]
+		There are 22 instances in this cluster 
+
+	Cluster 2: 
+		Centroid Value: [0.25892857 0.69494048 0.08232446 0.07738095]
+		There are 28 instances in this cluster 
+
+	Cluster 3: 
+		Centroid Value: [0.33111111 0.25       0.49627119 0.46      ]
+		There are 25 instances in this cluster 
+
+	Cluster 4: 
+		Centroid Value: [0.75534188 0.48237179 0.83116037 0.86698718]
+		There are 26 instances in this cluster 
+
+	Cluster 5: 
+		Centroid Value: [0.51641414 0.34848485 0.70724191 0.75189394]
+		There are 22 instances in this cluster 
+
+Number of clusters: 7		SSE: 3.7135607536569575
+
+	Cluster 0: 
+		Centroid Value: [0.10620915 0.42892157 0.07078764 0.03431373]
+		There are 17 instances in this cluster 
+
+	Cluster 1: 
+		Centroid Value: [0.51736111 0.33854167 0.70833333 0.73611111]
+		There are 24 instances in this cluster 
+
+	Cluster 2: 
+		Centroid Value: [0.75534188 0.48237179 0.83116037 0.86698718]
+		There are 26 instances in this cluster 
+
+	Cluster 3: 
+		Centroid Value: [0.58333333 0.41468254 0.60694108 0.55753968]
+		There are 21 instances in this cluster 
+
+	Cluster 4: 
+		Centroid Value: [0.20694444 0.59583333 0.07881356 0.07083333]
+		There are 20 instances in this cluster 
+
+	Cluster 5: 
+		Centroid Value: [0.29700855 0.79487179 0.08865711 0.07692308]
+		There are 13 instances in this cluster 
+
+	Cluster 6: 
+		Centroid Value: [0.35153257 0.23994253 0.5119813  0.47413793]
+		There are 29 instances in this cluster 
+
+
+The best value of K based on the SSE is: 3
